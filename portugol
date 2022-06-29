@@ -1,0 +1,99 @@
+                        EXEMPLO DE NOTA
+
+
+programa
+{
+	real media, soma
+	real notas[4]
+	inteiro i
+	
+	funcao inicio()
+	{
+		soma = 0
+		escreva("Digite as 4 notas:\n")
+		para(i = 0; i <= 3; i++){
+			leia(notas[i])	
+			soma += notas[i]
+
+		}
+		media = soma/4
+
+		limpa()
+		escreva("Sua média é: "+ media+ "\n")
+
+		para(i = 0; i <= 3; i++){
+			escreva("Nota"+ (i+1)+ ": "+ notas[i]+ "\n")
+		}
+		
+	}
+}
+
+
+
+                        EXEMPLO DE MATRICULA
+
+
+
+programa
+{
+	inteiro mat[5]
+	inteiro i, cons, controle
+	caracter continua = 's'
+	
+	funcao inicio()
+	{
+		para(i = 0; i <= 4; i++){
+			escreva("Digite a matrícula do aluno: ")
+			leia(mat[i])
+		}
+
+		enquanto(continua != 'n'){
+			controle = 0
+			escreva("Qual matrícula deseja consultar?\n")
+			leia(cons)
+			para(i = 0; i <= 4; i++){
+				se(cons == mat[i]){
+					controle = 1
+				}
+			}
+			se(controle == 1){
+				escreva("Matrícula encontrada!\n")
+			}
+			senao{
+				escreva("Matrícula inexistente.\n")	
+			}
+			escreva("Deseja verificar outra matrícula, s ou n?\n")
+			leia(continua)
+			limpa()
+		}
+		escreva("Até logo!")
+	}
+}
+
+
+                                EXERCICIO 1
+
+
+programa
+{
+//CRIE UM ALGORITMO QUE PERMITE GERAR OS 5 NUMEROS ENTRE 1 E 50 SORTEADOS EM UM JOGO DA LOTERIA (LOTO),
+//ARMAZENANDO-OS EM UM VETOR.
+//NO FINAL EXIBIR NA TELA OS CINCOS NÚMEROS SORTEADOS.
+
+	inclua biblioteca Util --> u
+	inteiro i, alea
+	inteiro sorteados[5]
+	
+	
+	funcao inicio()
+	{
+		escreva("Numeros sorteados:\n")
+		para(i = 0; i <= 4; i++){
+			alea = u.sorteia(1,50)
+			escreva(alea+" ")
+			sorteados[i] = alea
+		}
+		
+	}
+}
+
