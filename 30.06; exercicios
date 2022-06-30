@@ -56,3 +56,33 @@ programa
 	}
 }
 
+programa
+{
+//2. Cadastrar 10 números de matrículas de alunos e armazená-los em um vetor. Esses números são distintos, ou seja, não podem existir números de 
+//matrículas iguais, e deve estar no intervalo de 100 a 200. Mostrar na tela as matrículas armazenadas, em ordem crescente.
+	
+	
+	inteiro matri[4], i, num, controle = 0
+	
+	
+	funcao inicio()
+	{
+		enquanto(falso){
+		escreva("Digite 10 números de matícula:\n")
+		para(i = 0; i <= 3; i++){
+			leia(matri[i])	
+			num = matri[i]
+			se (matri[i] == matri[i]){pare}
+		}	
+		}
+		
+			se(num >= 100 e  num <= 200 ){
+			escreva("Matrículas Existente\n")
+			}
+			senao
+			escreva("Erro, matrículas inexistente.\n")
+		}
+	}
+
+	
+
