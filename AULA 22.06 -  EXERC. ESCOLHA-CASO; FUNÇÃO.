@@ -1,0 +1,146 @@
+				                                            EXEMPLOS DE (ESCOLHA CASO)
+
+programa {
+
+    caracter opcao
+    
+	funcao inicio() {
+	    escreva("Digite uma letra: ")
+	    leia(opcao)
+	    
+	    escolha(opcao){
+	        caso 'a':
+	            escreva("A letra escolhida foi a\n ")
+	            pare
+	        caso 'b':
+	            escreva("A letra escolhida foi b\n ")
+		        pare
+		    caso contrario:
+		    escreva("Letra incorreta!!!\n ")
+	}
+}
+
+
+programa {
+
+    caracter menu
+    
+	funcao inicio() {
+	    escreva("Escolha uma opção:\n")
+	    escreva("1. Abrir\n")
+	    escreva("2. Salvar\n")
+	    escreva("3. Fechar\n")
+        leia(menu)
+
+        escolha(menu){
+            caso '1':
+                escreva("O Programa será aberto, Aguarde.\n")
+                pare
+            caso '2':
+                escreva("O Arquivo será salvo\n")
+                pare
+            caso '3':
+                escreva("Fechando a aplicação. Tchau!!\n")
+                pare
+            caso contrario:
+                escreva("Opção incorreta!\n")
+        }	
+}
+}
+
+					                                            EXERCICIO DE FIXAÇÃO
+
+programa {
+
+    cadeia menu
+    
+         funcao inicio() {
+              escreva("Digite o nome de uma fruta: \n")
+              escreva("Morango\n")
+              escreva("Melancia\n")
+              escreva("Pitanga\n")
+              escreva("Uva\n")
+              escreva("\n")
+              leia(menu)
+
+         escolha(menu){
+             caso"Morango":
+                 escreva("Milkshake\n")
+                  pare
+             caso"Melancia":
+                  escreva("Suco Refrescante\n")
+                   pare
+             caso"Pitanga":
+                   escreva("Suco de Polpa\n")
+                   pare
+             caso"Uva":
+                   escreva("Vinho Tinto\n")
+                   pare
+             caso contrario:
+                   escreva("Fruta Indisponivel!!\n")
+    } 
+  }
+}
+
+
+				                                      EXEMPLO DE CRIAÇÃO DE FUNÇÃO
+
+programa {
+
+
+  funcao inicio() {
+    mostraMensagem()
+  }
+
+  funcao mostraMensagem(){
+    escreva("Aula de Programação!\n")
+    escreva("Logica de Programação\n")
+    escreva("Hoje é Quarta-Feira!\n")
+  }  
+
+}
+
+
+				EXEMPLO DE DEFINIÇÃO DE FUNÇÃO
+
+programa {
+
+  funcao inicio() {
+    inteiro numero = 25
+    cubo(numero)
+  }
+  funcao cubo(inteiro num){
+    escreva("Calculo do cubo de um número.\n")
+    inteiro c = num * num * num
+    escreva("O cubo de ", num, " é ", c, "\n")
+  }
+
+}
+
+					                                          EXERCICIO DE FIXAÇÃO
+
+programa {
+//Crie um programa que use uma função para calcular ( e mostrar) a area de um circulo, solicitando ao usuario o valor do raio da circuferência.
+
+    real raio1
+    real area_total
+
+  funcao inicio() {
+    escreva("Qual o valor do raio? ")
+    leia(raio1)
+
+   area_total = calcular_area( raio1)
+   escreva("A Área do circulo é ", area_total, "\n")
+    
+  }
+  funcao calcular_area(real raio){
+    real area = 0.0
+    area = 3.14 * (raio * raio)
+    retorne area
+    }
+}
+
+
+
+
+
