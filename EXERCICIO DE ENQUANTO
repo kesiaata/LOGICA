@@ -1,0 +1,88 @@
+						                                      EXERCICIO UM
+
+programa {
+//Mostrar na tela a sequencia de numero de 1 a 10, usando a estrutura de repetição enquanto.
+
+    inteiro num
+
+  funcao inicio() {
+    num = 10
+
+    enquanto(num <= 500){
+        escreva(num, " ")
+        num++ 
+    }
+  }
+}
+
+						                                            EXERCICIO DOIS
+
+programa {
+//Para execultar varias  vezes  o nome e para quando digitar a letra q.
+
+    cadeia nome
+
+  funcao inicio() {
+    escreva("Digite seu nome, ou q para sair: ")
+    leia(nome)
+
+    enquanto (nome != "q"){
+        escreva("Bons Estudos, ", nome, "\n")
+        escreva("Digite seu nome, ou q para sair: ")
+        leia(nome)
+    }
+    escreva("Até logo!\n")
+  }
+}
+						                                            OUTRA OPÇÃO DE FAZER
+
+programa {
+//
+    cadeia nome
+
+  funcao inicio() {
+
+    enquanto (verdadeiro){
+        escreva("Digite seu nome, ou q para sair: ")
+        leia(nome)
+        se (nome == "q"){
+            pare
+        }
+        escreva("Bons Estudos, ", nome, "\n")
+    }
+    escreva("Até logo!\n")
+  }
+}
+
+						                                              EXERCICIO TRES
+programa {
+//Imprima na tela os números de 1 a 10, usando estrutura de repetição "PARA".
+
+    inteiro cont
+
+  funcao inicio() {
+
+    para(cont = 1; cont <= 10; cont++){
+        escreva(cont, " ")
+    }   
+  }
+}
+
+						                                              EXERCICIO QUATRO
+
+programa {
+    inclua biblioteca Util
+    inteiro n
+    
+	funcao inicio() {
+	    escreva("Gerar números da loteria.\n")
+	    
+	    para(n=1; n<=5; n++){
+	        escreva(Util.sorteia(1,5), " ")
+	    }
+	}
+}
+
+
+
+
