@@ -31,3 +31,26 @@ TV-01		9
 AS-03		7
 RF-14		3
 
+
+
+                                                                RESOLVIDOS
+
+programa
+{
+//1. Ler 10 números e imprimi-los na ordem inversa da leitura, ou seja, o último número lido deve ser o primeiro impresso.
+	inteiro num[10], i
+	
+	
+	funcao inicio()
+	{
+		escreva("Digite 10 numeros:\n")
+		para(i = 0; i <= 9; i++){
+			leia(num[i])
+			
+		}
+		para(i = 9; i >= 0; i--){
+			escreva("numero: "+ num[i]+ "\n")
+		}
+	}
+}
+
