@@ -1,0 +1,72 @@
+			                                  EXERCICIO SOLICITANDO BIBLIOTECA
+
+programa {
+    //1. Pedir para o usuário informar os limites do intervalo a ser gerado, desde que o valor maximo seja menor que 100, 
+    //realizando validação caso um número fora desse intervalo seja informado (não gerar número).
+
+    inclua biblioteca Util --> u
+    inteiro inicial, final, alea
+
+  funcao inicio() {
+    escreva("Digite um número inicial: ")
+    leia(inicial)
+    escreva("Digite um número final, sendo que seja até 100: ")
+    leia(final)
+
+    alea = u.sorteia(inicial, final)
+
+    se(final >= 100){
+    escreva("ERRO!\n ")
+    }   
+    senao{
+    escreva("Número Aleatorio: ",alea, "\n")
+    }
+  }
+}
+
+
+programa {
+//2. Gerar um número entre 15 e 20, exceto o 17. Emitir mensagem de erro se esse valor for gerado.
+    
+    inclua biblioteca Util --> u
+    inteiro inicial, final, alea
+
+  funcao inicio() {
+    inicial = 15
+    final = 20
+
+     alea = u.sorteia(inicial, final)
+    escreva("Número Aleatório Gerado: ", alea, "\n")
+
+    se (alea == 17){
+        escreva("ERRO! ")
+    } 
+   }
+}
+
+
+programa {
+    //3. Gerar dois números aleatórios entre 1 e 5 e compará-los. Se forem iguais, exibir mensagem "Números iguais"; caso contrário, mostrar msg "Números são diferentes".
+    //Exibir os números gerados na tela.
+
+    inclua biblioteca Util --> u
+    inteiro inicial, final, alea1, alea2
+
+  funcao inicio() {
+    inicial = 1
+    final = 5
+
+     alea1 = u.sorteia(inicial, final)
+    escreva("Primeiro Numero: ", alea1, "\n")
+
+     alea2 = u.sorteia(inicial, final)
+     escreva("Segundo Numero: ", alea2)
+
+     se (alea1 == alea2){
+     escreva("\nOs números iguais\n")
+     }
+     senao{
+     escreva("\nOs números são diferentes\n")
+     }  
+  }
+}
