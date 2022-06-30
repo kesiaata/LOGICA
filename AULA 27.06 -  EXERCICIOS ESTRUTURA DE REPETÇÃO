@@ -1,0 +1,31 @@
+1.) Mostre na tela os números pares entre 1000 e 1
+
+2.) Imprima o somatório total da sequência: 1, 1/2, 1/3 [...] 1/20.
+
+3.) Some os números de 1 a 10, apresentando as somas parciais e, no final, o total. A impressão deve seguir o padrão:
+a) 3 (soma do número 1 com o número 2)
+b) 6 (soma parcial com o número 3)
+c) 10 (soma parcial com o número 4)
+d) [...]
+e) 55 (soma parcial com o número 10)
+f) Soma total: 55
+
+4.) Simule um jogo de adivinhação no qual o jogador 1 escolhe um número entre 1 e 10; o jogador 2 insere números na tentativa de acertar o número escolhido pelo jogador 1. Quando ele acertar, o algoritmo deverá informar que ele acertou o número x (escolhido pelo jogador 1) em x tentativas (quantidade de tentativas do jogador 2)
+
+5.) Altere o programa anterior para permitir que o jogador 1 insira apenas números entre 1 e 20, e o jogador 2 tenha apenas 4 tentativas para adivinhar o número.
+
+
+
+					                                        RESOLVIDOS
+programa {
+    //1.) Mostre na tela os números pares entre 1000 e 1
+    inteiro cont
+    
+	funcao inicio() {
+	    
+		para(cont = 1000; cont >= 1; cont-=2){
+        		escreva(cont, " ")
+    }   
+	}
+}
+
