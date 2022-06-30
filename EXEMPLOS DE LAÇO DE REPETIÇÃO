@@ -1,0 +1,112 @@
+                                                  LAÇO DE REPETIÇÃO
+
+
+
+programa {
+    inclua biblioteca Util --> u
+    inteiro contA, contB
+    real num
+    
+	funcao inicio() {
+        enquanto(num != 0){
+        escreva("Digite a quantidade de vezes do loop: ")
+        leia(num)
+       
+        para(contA = 1 ; contA <= num; contA++){
+	        escreva("Rodada: ", contA, "\n")
+	        para(contB = num ; contB >= 0; contB--){
+	            inteiro numero = u.sorteia(1, 100)
+	            escreva(" Valor: ", numero, "\n")
+	        }
+		}
+        }
+        escreva("Tchau!\n")
+	}
+}
+
+
+
+
+programa {
+    inclua biblioteca Util --> u
+    inteiro cont, quant
+
+  funcao inicio() {
+    escreva("Para sair do programa digite 0\n")
+    enquanto(verdadeiro){
+        escreva("\nQuantos números vc quer? ")
+        leia(quant)
+        se(quant == 0) {pare}
+        para(cont = 1; cont <== quant; cont++){
+            escreva(u.sorteia(1,100), " ")
+        }
+    }
+  
+}
+
+
+
+
+
+
+programa {
+    inclua biblioteca Util --> u 
+    inteiro contA, contB, quantA, quantB
+
+  funcao inicio() {
+        escreva("Quantos conjuntos deseja gerar? ")
+        leia(quantA)
+        escreva("Quantos números em cada conjunto? ")
+        leia(quantB)
+
+        para(contA = 1; contA <= quantA; contA++){
+            escreva("\nConjunto ", contA, ": ")
+            para(contB = 1; contB <= quantB; contB++){
+                inteiro n = u.sorteia(1,100)
+                escreva(n, " ")
+            }
+        }
+    
+    }
+}
+
+
+
+
+					                                      EXERCICIO PARA MEMORIZAÇÃO
+
+
+programa {
+//Elabore um programa que pergunte a um usuário seu nome, e que também peça a ele para escolher um número menor que 100.
+//O algoritmo então deve gerar na tela uma sequência numérica inversa (do maior para o menor) de 100 até o valor escolhido pelo usuário,
+//escrevendo no final a seguinte frase (uma vez): "Aí está sua sequência de [XX] números, Sr. [YY]" Onde XX é a quantidade de números mostrados, e YY o nome do usuário.
+
+//O Programa deve então pedir para o usuário digitar uma tecla qualquer, limpar a tela e perguntar a outro usuário seu nome, e assim sucessivamente, 
+//para um número indeterminado de usuários.
+
+//O programa deve ser encerrado caso o usuário digite a palavra "Sair".
+
+    inclua biblioteca Util --> u 
+    cadeia nome, limpa =""
+    inteiro num, contA
+
+  funcao inicio() {
+    
+        enquanto(verdadeiro){
+            escreva("Qual é o seu nome? ")
+            leia(nome)
+            se (nome == "sair") {pare}
+            escreva("Escolha um número menor que 100: ")
+            leia(num)
+           
+            para(contA = 100; contA >= num; contA--){
+            escreva("Sequencia de Numeros: ", contA, " \n")
+            }
+            escreva("Ai está sua sequencia de ", num, " números, Sr(a) ", nome, ".\n") 
+        }
+        escreva("\nDigite qualquer coisa para apagar: ")
+        leia(limpa)
+        se (limpa != "") {limpa()}
+    }
+}
+
