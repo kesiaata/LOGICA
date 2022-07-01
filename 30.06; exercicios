@@ -84,5 +84,32 @@ programa
 		}
 	}
 
-	
+
+programa {
+//3. Crie um vetor de 5 números informados pelo usuário e monte outro vetor contendo os valores do primeiro 
+//multiplicados por 3. Mostrar os elementos de ambos os vetores na tela, lado a lado.
+//Número	x3
+//1	3
+//2	6
+//4	12
+//5	15
+//3	9
+
+        inteiro num[5], i , mult[5]
+        
+	funcao inicio() {
+	   
+	    para(i = 0; i <= 4; i++){
+	        escreva("Digite um número:\n")
+	        leia(num[i])
+	        mult[i] = num[i] * 3
+	    }
+	    escreva("Número  x3 ")
+	    para(i = 0; i <= 4; i++){
+	        escreva("\n"+ num[i]+ " "+ mult[i]+ "\n")
+	    }
+		
+	}
+}
+
 
