@@ -121,7 +121,7 @@ programa {
 //João		10
 //Maria		15
 //Ana		2
-//Renata		8
+//Renata	8
 //Jorge		22
 
     inteiro vetTempoCasa[5], i
@@ -142,4 +142,33 @@ programa {
 	}
 }
 
+
+
+programa {
+//5. Um depósito armazena 8 produtos distintos, e para cada tipo de produto existe um código. 
+//Crie um algoritmo para ler o código do produto e a quantidade em estoque. Monte dois vetores para 
+//armazenar respectivamente os códigos das mercadorias e a quantidade dos produtos. Mostrar na tela os dados, 
+//em formato tabular.
+//CodProduto	QtdeEstoque
+//TV-01		9
+//AS-03		7
+//RF-14		3
+
+    inteiro qtdeEstoque[8], i
+    cadeia codProduto[8]
+
+	funcao inicio() {
+	    para(i = 0; i <= 7; i++){
+	        escreva("Digite o Código do Produto: ")
+	        leia(codProduto[i])
+	        escreva("Digite a Quantidade em Estoque: ")
+	        leia(qtdeEstoque[i])
+	    }
+	    escreva("\nCodProduto	QtdeEstoque\n")
+	    para(i = 0; i <= 7; i++){
+	    escreva("\n"+ codProduto[i]+ "     "+ qtdeEstoque[i])
+	    }
+		
+	}
+}
 
