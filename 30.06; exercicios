@@ -56,33 +56,65 @@ programa
 	}
 }
 
+
+
 programa
 {
 //2. Cadastrar 10 números de matrículas de alunos e armazená-los em um vetor. Esses números são distintos, ou seja, não podem existir números de 
 //matrículas iguais, e deve estar no intervalo de 100 a 200. Mostrar na tela as matrículas armazenadas, em ordem crescente.
 	
 	
-	inteiro matri[4], i, num, controle = 0
-	
-	
+inteiro alunos[10]
+	inteiro mat, pos, cont, ordeA, ordeB, troque = 0
+	caracter controle = 's'
 	funcao inicio()
 	{
-		enquanto(falso){
-		escreva("Digite 10 números de matícula:\n")
-		para(i = 0; i <= 3; i++){
-			leia(matri[i])	
-			num = matri[i]
-			se (matri[i] == matri[i]){pare}
-		}	
-		}
-		
-			se(num >= 100 e  num <= 200 ){
-			escreva("Matrículas Existente\n")
+		para(pos = 0; pos < 10; pos++){
+			enquanto(verdadeiro){
+				escreva("Digite a matrícula: ")
+				leia(mat)	
+				
+				//Verificar se matrícula já existe
+				para(cont = 0; cont < 10; cont++){
+					se(mat == alunos[cont]){
+						escreva("Valor já existe! Digite outro\n")
+						controle = 'n'
+					}
+				}
+				
+				//Verificar se números estão no intervalo válido
+				se((mat < 100) ou (mat > 200)){
+					escreva("Valor inválido!\n")
+					controle = 'n'
+				}
+	
+				//Se matrícula válida, efetiva-la
+				se(controle != 'n'){
+					alunos[pos] = mat
+					pare
+				}
+
+				//Libera cadastro de dados no vetor
+				controle = 's'
 			}
-			senao
-			escreva("Erro, matrículas inexistente.\n")
 		}
+
+		//Ordenar valores e exibi-los na tela:
+		para(ordeA = 0; ordeA < 10; ordeA++){
+			para(ordeB = ordeA+1; ordeB < 10; ordeB++){
+				se(alunos[ordeA] > alunos[ordeB]){
+					troque = alunos[ordeB]
+					alunos[ordeB] = alunos[ordeA]
+					alunos[ordeA] = troque
+				}
+			}
+		}
+		para(ordeA = 0; ordeA < 10; ordeA++)
+		escreva(alunos[ordeA]+ " ")	
 	}
+}
+
+
 
 
 programa {
@@ -113,6 +145,8 @@ programa {
 }
 
 
+
+
 programa {
 //4. Cadastrar 5 nomes de professores e seus respectivos tempos de profissão. Armazene esses valores em dois 
 //vetores: vetProfessor e vetTempoCasa. Mostrar os dados na tela, em uma tabela com os nomes dos 
@@ -141,6 +175,7 @@ programa {
 		
 	}
 }
+
 
 
 
