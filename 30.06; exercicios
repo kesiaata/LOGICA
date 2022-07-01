@@ -113,3 +113,33 @@ programa {
 }
 
 
+programa {
+//4. Cadastrar 5 nomes de professores e seus respectivos tempos de profissão. Armazene esses valores em dois 
+//vetores: vetProfessor e vetTempoCasa. Mostrar os dados na tela, em uma tabela com os nomes dos 
+//professores na coluna à esquerda, e os tempos de profissão em uma coluna à direita.
+//Professor	Tempo de Casa (anos)
+//João		10
+//Maria		15
+//Ana		2
+//Renata		8
+//Jorge		22
+
+    inteiro vetTempoCasa[5], i
+    cadeia vetProfessor[5]
+    
+	funcao inicio() {
+	    para(i = 0; i <= 4; i++){
+	        escreva("Digite seu Nome: ")
+	        leia(vetProfessor[i])
+	        escreva("Escreva seu Tempo de Profissão: ")
+	        leia(vetTempoCasa[i])
+	    }
+	    escreva("\nProfessor Tempo de casa(anos)\n")
+	    para(i = 0; i <= 4; i++){
+	    escreva("\n"+ vetProfessor[i]+ "     "+ vetTempoCasa[i])
+	    }
+		
+	}
+}
+
+
