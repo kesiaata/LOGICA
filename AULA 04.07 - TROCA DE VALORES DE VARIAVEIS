@@ -83,3 +83,40 @@ inteiro vet[10]
 	}
 }
 
+					EXEMPLO SORTEANDO NUM. ALEATORIOS E ORDENANDO
+
+
+programa
+{
+	inclua biblioteca Util --> u
+	inteiro vet[6]
+	inteiro cont, contA, contB, aux, alea, inicial = 1, final = 100
+	
+	funcao inicio()
+	{
+		
+		escreva("Números aleatórios sorteados:\n")
+		
+		//Preencher o array
+		para (cont = 0; cont <= 5; cont++){
+			alea = u.sorteia(inicial, final)
+			vet[cont] = alea
+		}
+		//Ordenar o array criado
+		para(contA = 0; contA <= 5; contA++){
+			para(contB = contA + 1; contB <= 5; contB++){
+				se(vet[contA] > vet[contB]){
+					aux = vet[contB]
+					vet[contB] = vet[contA]
+					vet[contA] = aux
+				}
+			}
+		}
+		//Exibir o array ordenado
+		para(cont = 0; cont <= 5; cont++){
+			escreva(vet[cont]+ " ")
+		}
+	}
+}
+
+
