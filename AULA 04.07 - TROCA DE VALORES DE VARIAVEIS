@@ -24,7 +24,7 @@ programa
 programa
 {
 	
-inteiro vet[3]
+	inteiro vet[3]
 	inteiro cont, contA, contB, aux
 	
 	funcao inicio()
