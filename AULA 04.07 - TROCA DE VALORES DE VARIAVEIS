@@ -134,5 +134,41 @@ No final, imprima na tela os valores armazenados no vetor C em ordem decrescente
 
 Dica: tente usar funções para realizar as ordenações.
 
+							RESOLVIDOS
+
+programa
+{
+//1.) Leia um vetor de 15 números e monte outro com os valores do primeiro multiplicados por sete, em ordem decrescente.
+//Imprima na tela os dois vetores.
+	inteiro num[5], mult[5], i
+	inteiro contA, contB, aux
+	
+	funcao inicio()
+	{
+		para(i = 0; i <= 4; i++){
+		escreva("Digite um número: ")
+	        leia(num[i])
+	        mult[i] = num[i] * 7	
+		}
+		para(contA = 0; contA <= 4; contA++){
+			para(contB = contA + 1; contB <= 4; contB++){
+			se(mult[contA] < mult[contB]){
+					aux = mult[contB]
+					mult[contB] = mult[contA]
+					mult[contA] = aux
+			}
+		}
+	}
+		escreva("Números\n")
+		para(i = 0; i <= 4; i++){
+			escreva(num[i]+ " ")
+			
+		}
+		escreva("\nMultiplicados por 7, em ordem decrescente\n")
+		para(i = 0; i <= 4; i++){
+		escreva(mult[i]+ " ")
+		}
+	}
+}
 
 
