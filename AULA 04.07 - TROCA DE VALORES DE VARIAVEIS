@@ -186,23 +186,34 @@ programa
 	funcao inicio()
 	{
 		para(i = 0; i <= 4; i++){
-			escreva("Digite um número: ")
+			escreva("Digite um número para armazenar em A: ")
 			leia(vetA[i])
 		}
 		para(i = 0; i <= 4; i++){
-			escreva("Digite mais um número: ")
+			escreva("Digite um número para armazenar em B: ")
 			leia(vetB[i])
 		}
-			escreva("\nSoma dos vetores A e B:\n")
-			para(i = 0; i <= 4; i++){
-				vetC[i] = vetA[i] + vetB[i]
-				escreva(vetC[i]+ " ")			
+		escreva("\nSoma dos vetores A e B em ordem decrescente:\n")
+		para(i = 0; i <= 4; i++){
+			vetC[i] = vetA[i] + vetB[i]			
+		}
+		para(contA = 0; contA <= 4; contA++){
+			para(contB = contA + 1; contB <= 4; contB++){
+				se(vetC[contA] < vetC[contB]){
+					aux = vetC[contB]
+					vetC[contB] = vetC[contA]
+					vetC[contA] = aux
+				}
 			}
-			escreva("\nMultiplicação dos vetores A e B:\n")
-			para(i = 0; i <= 4; i++){
-				vetD[i] = vetA[i] * vetB[i]
-				escreva(vetD[i]+ " ")	
-			}
+		}
+		para(i = 0; i <= 4; i++){
+		escreva(vetC[i]+ " ")
+		}
+		escreva("\nMultiplicação dos vetores A e B:\n")
+		para(i = 0; i <= 4; i++){
+			vetD[i] = vetA[i] * vetB[i]
+			escreva(vetD[i]+ " ")	
+		}
 	}
 }
 
