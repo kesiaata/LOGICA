@@ -1,12 +1,12 @@
 programa
 {
     inteiro vet[3]
-    inteiro num, pos
+    inteiro num, pos, i
 
     funcao inicio()
     {
       //Criar array e preencher
-      para(inteiro i = 0; i < 3; i++){
+      para(i = 0; i < 3; i++){
         escreva("Entre com um valor: ")
         leia(vet[i])
       }
