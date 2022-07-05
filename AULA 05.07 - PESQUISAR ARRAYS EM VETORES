@@ -1,0 +1,30 @@
+programa
+{
+    inteiro vet[3]
+    inteiro num, pos
+
+    funcao inicio()
+    {
+      //Criar array e preencher
+      para(inteiro i = 0; i < 3; i++){
+        escreva("Entre com um valor: ")
+        leia(vet[i])
+      }
+
+      //Entrar com valor a pesquisar
+      escreva("Digite um número para pesquisar: ")
+      leia(num)
+      pos = 0
+
+      //Pesquisa no array
+      enquanto((pos < 2) e (vet[pos] != num)){
+        pos = pos++	
+      }
+      se(vet[pos] == num){
+        escreva("Número encontrado na posição "+ pos)
+      }
+      senao{
+        escreva("Número não encontrado no array ")
+      }
+    }
+}
