@@ -1,33 +1,29 @@
-								EXERCICIOS DE FIXAÇÃO
-
+						EXERCICIO DE FIXAÇÃO
 
 programa
 {//Um supermercado possui 4 frutas em um estoque:morngo, banana, caju, amora. Crie um algoritmo que pergunte a um usuario qual fruta ele deseja comprar neste 
 //supermercado. Caso o usuario escolha uma das frutas em estoque, avisá-lo que a fruta está disponivel. Caso contrário, emitir mensagem de fruta indisponivel.
 //Duca: armazene os nomes das frutas em um array.
+
+	inclua biblioteca Texto --> t
+	cadeia frutas[] = {"morango", "banana", "caju", "amora"}, fruta
+	inteiro pos
 	
-    cadeia frutas[4], fruta
-    inteiro pos, i
+	funcao inicio()
+	{
+		escreva("Qual fruta deseja comprar? ")
+		leia(fruta)
+		fruta = t.caixa_baixa(fruta)
+		pos = 0
 
-  funcao inicio()
-   {
-      para(i = 0; i < 4; i++){
-        escreva("Digite as frutas existentes no seu estoque: ")
-        leia(frutas[i])
-      }
-      limpa()
-      escreva("Qual fruta deseja comprar? ")
-      leia(fruta)
-      pos = 0
-
-      enquanto((pos < 3) e (frutas[pos] != fruta)){
-        pos++
-      }
-      se(frutas[pos] == fruta){
-        escreva("Fruta está disponivel!\n")
-      }
-      senao{
-        escreva("Fruta indisponivel!!\n")
-      }
-  }
+		enquanto((pos < 3) e (frutas[pos] != fruta)){
+			pos++
+		}
+		se(frutas[pos] == fruta){
+			escreva("Fruta está disponivel!\n")
+		}
+		senao{
+			escreva("Fruta indisponivel!!\n")
+		}
+	}
 }
