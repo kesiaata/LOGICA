@@ -1,6 +1,8 @@
+								EXERCICIOS DE FIXAÇÃO
+
+
 programa
-{
-//Um supermercado possui 4 frutas em um estoque:morngo, banana, caju, amora. Crie um algoritmo que pergunte a um usuario qual fruta ele deseja comprar neste 
+{//Um supermercado possui 4 frutas em um estoque:morngo, banana, caju, amora. Crie um algoritmo que pergunte a um usuario qual fruta ele deseja comprar neste 
 //supermercado. Caso o usuario escolha uma das frutas em estoque, avisá-lo que a fruta está disponivel. Caso contrário, emitir mensagem de fruta indisponivel.
 //Duca: armazene os nomes das frutas em um array.
 	
@@ -14,7 +16,7 @@ programa
         leia(frutas[i])
       }
       limpa()
-      escreva("Digite a fruta que deseja: ")
+      escreva("Qual fruta deseja comprar? ")
       leia(fruta)
       pos = 0
 
@@ -22,7 +24,7 @@ programa
         pos = pos++
       }
       se(frutas[pos] == fruta){
-        escreva("Fruta esta disponivel!\n")
+        escreva("Fruta está disponivel!\n")
       }
       senao{
         escreva("Fruta indisponivel!!\n")
