@@ -21,7 +21,7 @@ programa
       pos = 0
 
       enquanto((pos < 3) e (frutas[pos] != fruta)){
-        pos = pos++
+        pos++
       }
       se(frutas[pos] == fruta){
         escreva("Fruta está disponivel!\n")
