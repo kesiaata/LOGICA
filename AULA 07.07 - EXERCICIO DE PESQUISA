@@ -39,7 +39,6 @@ programa
 	
 	funcao inicio()
 	{
-		
 	//Armazenando números aleatorios no vetor
 		para (cont = 0; cont < 1000; cont++){
 		alea = u.sorteia(1, 2000)
@@ -56,8 +55,7 @@ programa
 			pos++
 		}
 		se(vetAlea[pos] == busca){
-			escreva("Número existente no array!\n")
-			
+			escreva("Número existente no array!\n")	
 		}
 		senao{
 			escreva("Número inexistente!!\n")
@@ -103,11 +101,7 @@ programa
 				inicial = meio + 1
 			}
 		}
-		se(encontrado == verdadeiro){
-			
-		}
-		senao{
-			
+		se(encontrado == verdadeiro){	
 		}
 			tempo_atual = u.tempo_decorrido()
 			tempo_total = tempo_atual - tempo_inicial
