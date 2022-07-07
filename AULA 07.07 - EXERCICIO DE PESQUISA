@@ -63,6 +63,9 @@ programa
 		senao{
 			escreva("Número inexistente!!\n")
 		}
+			tempo_atual = u.tempo_decorrido()
+			tempo_total = tempo_atual - tempo_inicial
+			escreva("Pesquisa Linear, Tempo Total: ", tempo_total, "\n")
 		
 	//Ordenando o vetor criado
 		para(contA = 0; contA < 1000; contA++){
@@ -74,22 +77,16 @@ programa
 				}
 			}
 		}
-		faca
-		{
 			tempo_atual = u.tempo_decorrido()
-			
 			tempo_total = tempo_atual - tempo_inicial
-	
-		}
-		enquanto (tempo_total < 10000) // 	Finaliza o programa após 10 segundos
-		escreva("Pesquisa Linear, Tempo Total: ", tempo_total, "\n")
+			escreva("A ordenação demorou, Tempo Total: ", tempo_total, "\n")
 	//Verificando se o vetor está ordenado
 		//para(contA = 0; contA < 1000; contA++){
 			//escreva(vetAlea[contA]+ " ")
 		//}
 	//Pesquisa binaria no vetor
 		inteiro inicial = 0
-		inteiro final = 1000
+		inteiro final = 999
 		inteiro meio
 		logico encontrado = falso
 
@@ -112,16 +109,8 @@ programa
 		senao{
 			
 		}
-		faca
-		{
 			tempo_atual = u.tempo_decorrido()
-			
 			tempo_total = tempo_atual - tempo_inicial
-	
-		}
-		enquanto (tempo_total < 10000) // 	Finaliza o programa após 10 segundos
-		escreva("Pesquisa Binaria, Tempo Total: ", tempo_total, "\n")
-		
+			escreva("Pesquisa Binaria, Tempo Total: ", tempo_total, "\n")
 	}
 }
-
