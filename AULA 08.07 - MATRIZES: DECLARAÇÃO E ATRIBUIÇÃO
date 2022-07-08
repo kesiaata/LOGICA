@@ -13,12 +13,17 @@
         }
       }
 
-      escreva("Valor na posição 0,1: "+ m[0][1]+ "\n")
+      escreva("Valor na posição 1,2: "+ m[1][2]+ "\n")
 
     //Escrever os dados da matriz na tela:
       para(lin = 0; lin <= 2; lin++){
         para(col = 0; col <= 2; col++){
-          escreva(m[lin][col]+ " ")
+          se(col < 2){
+            escreva(m[lin][col]+ " ")
+          }
+          senao{
+            escreva(m[lin][col]+ "\n")
+          }
         }
       }
     }	
