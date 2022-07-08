@@ -67,3 +67,36 @@ programa
 		}
 	}	
 }
+
+
+								PREENCHENDO COM TEMPO
+								
+programa
+{
+	inclua biblioteca Util --> u
+	inteiro m[4][4]//Matriz quadrada
+	inteiro lin, col
+	
+	funcao inicio()
+	{
+	//Inserindo valores na matriz
+		para(lin = 0; lin < 4; lin++){
+			para(col = 0; col < 4; col++){
+				m[lin][col] = u.sorteia(1,100)
+				u.aguarde(1000)
+			}
+		}
+	//Escrever os dados da matriz na tela:
+		para(lin = 0; lin < 4; lin++){
+			para(col = 0; col < 4; col++){
+				se(col < 3){
+					escreva(m[lin][col]+ " ")
+				}
+				senao{
+					escreva(m[lin][col]+ "\n")
+				}
+			}
+		}
+	}	
+}
+
