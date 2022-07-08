@@ -1,3 +1,5 @@
+                                                              EXEMPLO
+  
   programa
   {
     inteiro m[3][3]//Matriz quadrada
@@ -28,3 +30,40 @@
       }
     }	
   }
+
+
+                                                              EXERCICIO
+                                                              
+programa
+{//Modifique o codigo anterior para que seja gerada uma matriz 10x10 preenchida com números aleatórios.
+//Para a geração dos números, empregue a biblioteca util.
+
+	inclua biblioteca Util --> u
+	inteiro m[10][10]//Matriz quadrada
+	inteiro lin, col, alea
+	
+	funcao inicio()
+	{
+		//escreva("Números aleatorios:\n")
+	//Inserindo valores na matriz
+		para(lin = 0; lin < 10; lin++){
+			para(col = 0; col < 10; col++){
+				alea = u.sorteia(1,100)
+				m[lin][col] = alea
+				//escreva(alea+ " ")
+			}
+		}
+	//Escrever os dados da matriz na tela:
+		escreva("Matriz na tela:\n")
+		para(lin = 0; lin < 10; lin++){
+			para(col = 0; col < 10; col++){
+				se(col < 9){
+					escreva(m[lin][col]+ " ")
+				}
+				senao{
+					escreva(m[lin][col]+ "\n")
+				}
+			}
+		}
+	}	
+}
