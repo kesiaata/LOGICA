@@ -1,4 +1,4 @@
-				                                            EXEMPLOS DE (ESCOLHA CASO)
+				                EXEMPLOS DE (ESCOLHA CASO)
 
 programa {
 
@@ -48,7 +48,7 @@ programa {
 }
 }
 
-					                                            EXERCICIO DE FIXAÇÃO
+					             EXERCICIO DE FIXAÇÃO
 
 programa {
 
@@ -83,7 +83,7 @@ programa {
 }
 
 
-				                                      EXEMPLO DE CRIAÇÃO DE FUNÇÃO
+				             EXEMPLO DE CRIAÇÃO DE FUNÇÃO
 
 programa {
 
@@ -101,7 +101,7 @@ programa {
 }
 
 
-				EXEMPLO DE DEFINIÇÃO DE FUNÇÃO
+						EXEMPLO DE DEFINIÇÃO DE FUNÇÃO
 
 programa {
 
@@ -117,7 +117,7 @@ programa {
 
 }
 
-					                                          EXERCICIO DE FIXAÇÃO
+					          EXERCICIO DE FIXAÇÃO
 
 programa {
 //Crie um programa que use uma função para calcular ( e mostrar) a area de um circulo, solicitando ao usuario o valor do raio da circuferência.
