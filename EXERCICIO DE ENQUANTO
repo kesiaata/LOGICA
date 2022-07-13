@@ -1,4 +1,4 @@
-						                                      EXERCICIO UM
+						     EXERCICIO UM
 
 programa {
 //Mostrar na tela a sequencia de numero de 1 a 10, usando a estrutura de repetição enquanto.
@@ -15,7 +15,7 @@ programa {
   }
 }
 
-						                                            EXERCICIO DOIS
+						      EXERCICIO DOIS
 
 programa {
 //Para execultar varias  vezes  o nome e para quando digitar a letra q.
@@ -34,7 +34,7 @@ programa {
     escreva("Até logo!\n")
   }
 }
-						                                            OUTRA OPÇÃO DE FAZER
+						  OUTRA OPÇÃO DE FAZER
 
 programa {
 //
@@ -54,7 +54,7 @@ programa {
   }
 }
 
-						                                              EXERCICIO TRES
+						     EXERCICIO TRES
 programa {
 //Imprima na tela os números de 1 a 10, usando estrutura de repetição "PARA".
 
@@ -68,7 +68,7 @@ programa {
   }
 }
 
-						                                              EXERCICIO QUATRO
+						    EXERCICIO QUATRO
 
 programa {
     inclua biblioteca Util
