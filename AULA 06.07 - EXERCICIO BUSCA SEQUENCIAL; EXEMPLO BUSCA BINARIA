@@ -1,4 +1,4 @@
-						EXERCICIO DE FIXAÇÃO ALGORITMO BUSCA SEQUENCIAL
+						EXERCICIO DE FIXAÇÃO (ALGORITMO BUSCA SEQUENCIAL)
 
 programa
 {//Um supermercado possui 4 frutas em um estoque:morngo, banana, caju, amora. Crie um algoritmo que pergunte a um usuario qual fruta ele deseja comprar neste 
@@ -30,7 +30,7 @@ programa
 
 
 -------------------------------------------------------------------------------------------------------------------
-						ALGORITMO DE BUSCA BINARIA
+					EXEMPLO DE ALGORITMO DE BUSCA BINARIA
 
 programa
 {
