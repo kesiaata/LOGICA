@@ -1,0 +1,37 @@
+                                  CRIANDO JOGO DA FORCA
+
+programa
+{
+	inclua biblioteca Texto --> tx
+	cadeia palavra, letra, vetorPalavraSecreta[10], vetorLetraChutada[10]
+	inteiro i, tam, pos, erro
+	logico acertou = falso, ganhou = verdadeiro
+	
+	
+	funcao inicio()
+	{
+	
+		
+escreva("Qual a palavra secreta: ")
+		leia(palavra)
+		tam = tx.numero_caracteres(palavra)
+
+		para(i = 0; i < tam; i++){
+			vetorPalavraSecreta[i] = tx.extrair_subtexto(palavra, i, i+1)
+		}
+		pos = 0
+		para(i = 0; i < tam; i++){
+		escreva("Digite uma letra: ")
+		leia(letra)
+			se(vetorPalavraSecreta[i] == letra){
+					vetorLetraChutada[i] = letra
+				}
+			//enquanto((pos < tam) e (vetorPalavraSecreta[i] != letra)){
+				//pos++
+			//}
+		}
+		para(i = 0; i < tam; i++){
+			escreva(vetorLetraChutada[i])
+		}
+	}
+}
