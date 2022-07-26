@@ -41,75 +41,58 @@ escreva("Qual a palavra secreta: ")
 
 programa
 {
+	
 	inclua biblioteca Texto --> tx
-	cadeia palavra, letra, PalavraSecreta[10], LetraChutada[10]
+	
+	cadeia palavra, palavraSecreta[10], letra, letrachutada[10]
 	inteiro tam, pos, acertos, erros
 	logico acertou, repetiu
 	
-	
 	funcao inicio()
 	{
+	
+		//armazenando palavra secreta
 		escreva("Qual a palavra secreta: ")
 		leia(palavra)
 		tam = tx.numero_caracteres(palavra)
 		acertos = tam
 		erros = 6
-
-		para(pos = 0; pos < tam; pos++){
-			PalavraSecreta[pos] = tx.extrair_subtexto(palavra, pos, pos+1)
-		} limpa()
-
-		//repetição do laço ate que se esgote as chances
-		enquanto(acertos > 0 e erros > 0){
-			//posição de acordo com o tamanho da letra
+		
 			para(pos = 0; pos < tam; pos++){
-				LetraChutada[pos] = "*"
+				palavraSecreta[pos] = tx.extrair_subtexto(palavra, pos, pos+1)
 			}
-			escreva("Você tem "+ erros+ " chances. Digite uma letra para a palavra ")
-			para(pos = 0; pos < tam; pos++){
-				escreva(LetraChutada[pos])
-			}
-			escreva(": ")
-			leia(letra)
 
-			acertou = falso
-			repetiu = falso
-			
-			//verificar se a letra esta na palavra
+		enquanto((acertos > 0) e (erros > 0)){
+			//solicitando letra ao usuario
 			para(pos = 0; pos < tam; pos++){
-				se(letra == PalavraSecreta[pos]){
-					PalavraSecreta[pos] = PalavraSecreta[pos]
-					se(LetraChutada[pos] == letra){
-						repetiu = verdadeiro
-					}
-					senao{
-						acertou = verdadeiro
-						LetraChutada[pos] = letra
-						acertos--
-					}
+				escreva("Digite uma letra para a palavra: ")
+				leia(letra)
+
+				acertou = falso
+				repetiu = falso
+
+				//armazenando letra no na posição certa do segundo vetor
+				para(pos = 0; pos < tam; pos++){
+					se(letra == palavraSecreta[pos]){
+						se(letrachutada[pos] == letra){
+							repetiu = verdadeiro
+						}
+						senao{
+							acertou = verdadeiro 
+							letrachutada[pos] = letra
+							acertos--
+						}
+					}	
+				}
+				se(repetiu == verdadeiro){
+					escreva("Você já digitou está letra!\n")
+				}senao se(acertou == verdadeiro){
+					escreva("Você acertou a letra!\n")
+				}senao{
+					erros--
+					escreva("Você errou a letra!\n")
 				}
 			}
-
-			se(repetiu == verdadeiro){
-				escreva("Você já escolheu esta letra!")
-			}
-			senao se(acertou == verdadeiro){
-				escreva("Você acertou a letra!\n")
-			}
-			senao{
-				erros--
-				escreva("Você errou a letra!!\n")
-			}
-		}
-		se(acertos == 0){
-			escreva("Você descobriu a palavra: ")
-			para(pos = 0; pos < tam; pos++){
-			escreva(LetraChutada[pos])
-			}
-		}
-		se(erros == 0){
-			escreva("Você não descobriu a palavra!")
 		}
 	}
 }
-
