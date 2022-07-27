@@ -62,8 +62,8 @@ programa
 			palavraSecreta[pos] = tx.extrair_subtexto(palavra, pos, pos+1)
 		}
 
+		//meu laço vai se repetir ate que se esgote as chances de escolher uma letra.
 		enquanto((acertos > 0) e (erros > 0)){
-			//solicitando letra ao usuario
 			para(pos = 0; pos < tam; pos++){
 				escreva("Digite uma letra para a palavra: ")
 				leia(letra)
@@ -74,7 +74,7 @@ programa
 				//armazenando letra no na posição certa do segundo vetor, e 
 				//verificando se a letra esta na palavra.
 				para(pos = 0; pos < tam; pos++){
-					se(letra == palavraSecreta[pos]){
+					se(palavraSecreta[pos] == letra){
 						se(letrachutada[pos] == letra){
 							repetiu = verdadeiro
 						}
@@ -85,7 +85,7 @@ programa
 						}
 					}	
 				}
-				//Confirmações em relaçao ao usuario digitar a letra
+				//Confirmações em relaçao ao usuario digitar a letra.
 				se(repetiu == verdadeiro){
 					escreva("Você já digitou está letra!\n")
 				}senao se(acertou == verdadeiro){
@@ -95,6 +95,16 @@ programa
 					escreva("Você errou a letra!\n")
 				}
 			}
+		}
+		//condiçoes caso ele acerte ou erre a palavra.
+		se(acertos == 0){
+			escreva("\nVocê acertou a palavra: ")
+			para(pos = 0; pos < tam; pos++){
+				escreva(palavraSecreta[pos])	
+			}
+		}
+		se(erros == 0){
+			escreva("\nVocê não descobriu a palavra")
 		}
 	}
 }
